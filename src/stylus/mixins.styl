@@ -1,0 +1,32 @@
+vh100()
+    height 100vh
+    height calc(100vh - var(--vh-offset))
+
+min-vh100()
+    min-height 100vh
+    min-height calc(100vh - var(--vh-offset))
+
+multiline-ellipsis(count)
+    overflow hidden
+    display -webkit-box
+    -webkit-line-clamp count
+    -webkit-box-orient vertical
+singleline-ellipsis()
+    overflow hidden
+    white-space nowrap
+    text-overflow ellipsis
+
+text-ellipsis(max-width = 100%)
+    max-width max-width
+    white-space nowrap
+    word-wrap normal
+    overflow hidden
+    text-overflow ellipsis
+    display inline-block
+
+verticalCenter(w= 100%, h = 100%)
+    display flex
+    justify-content center
+    align-items center
+    width w
+    height h
