@@ -1,6 +1,7 @@
 // 封装http请求
 // @ts-nocheck
 import axios from 'axios';
+// @ts-ignore
 import qs from 'qs';
 
 const http = axios.create({
@@ -10,6 +11,7 @@ const http = axios.create({
 http.interceptors.request.use((config: any) => {
     // 请求头里面加入各种判断
     if (config.method === 'post' && config.data && config.data.constructor !== FormData) {
+        const urlArr = ['']
         let useJson = false;
         for (const i in urlArr) {
             if (config.url.includes(urlArr[i])) {

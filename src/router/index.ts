@@ -6,8 +6,17 @@ Vue.use(VueRouter)
   const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Order',
-    component: () => import(/* webpackChunkName: "page-game-app-category" */ '../views/order/index.vue'),
+    redirect: '/index'
+  },
+  {
+    path: '/index',
+    name: 'Index',
+    component: () => import(/* webpackChunkName: "page-game-app-category" */ '../views/index/index.vue')
+  },
+  {
+    path: '/order-list',
+    name: 'OrderList',
+    component: () => import(/* webpackChunkName: "page-game-app-category" */ '../views/order-list/index.vue'),
   }
 ]
 

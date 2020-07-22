@@ -82,7 +82,7 @@ export class BaseModel {
 
     getModelInstanceFromStore<T extends BaseModel>(Ctor: Constructor<T>) {
         const storeModelInstance = this.$store.getModelInstance(Ctor);
-        return storeModelInstance?.instance;
+        return storeModelInstance!.instance;
     }
 }
 
